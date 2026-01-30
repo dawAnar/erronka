@@ -1,7 +1,8 @@
 <?php
 
 try {
-    $db = new PDO('sqlite:../../denda.db');
+    $dbPath = __DIR__ . '/../../denda.db';
+    $db = new PDO('sqlite:' . $dbPath);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // ------------------------------------------------------

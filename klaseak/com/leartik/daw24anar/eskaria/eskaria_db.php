@@ -16,11 +16,11 @@ use com\leartik\daw24anar\taldea\TaldeaDB;
 
 class EskariaDB
 {
-    private const DB_PATH = "sqlite:C:\\Users\\PC-8\\xampp\\htdocs\\Erronka_01\\denda.db";
+    private const DB_FILE = __DIR__ . '/../../../../../denda.db';
 
     private static function db(): PDO
     {
-        $db = new PDO(self::DB_PATH);
+        $db = new PDO('sqlite:' . self::DB_FILE);
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $db;
     }

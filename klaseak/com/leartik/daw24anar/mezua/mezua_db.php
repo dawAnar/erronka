@@ -9,7 +9,7 @@ class MezuaDB
 {
     private static function db()
     {
-        $db = new PDO("sqlite:C:\\Users\\PC-8\\xampp\\htdocs\\Erronka_01\\denda.db");
+    $db = new PDO('sqlite:' . __DIR__ . '/../../../../../denda.db');
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $db;
     }

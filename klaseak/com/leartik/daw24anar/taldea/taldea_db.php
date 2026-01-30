@@ -7,11 +7,11 @@ require_once(__DIR__ . '/taldea.php');
 
 class TaldeaDB
 {
-    private const DB_PATH = "sqlite:C:\\Users\\PC-8\\xampp\\htdocs\\Erronka_01\\denda.db";
+    private const DB_FILE = __DIR__ . '/../../../../../denda.db';
 
     private static function connect() {
-        $db = new PDO(self::DB_PATH);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+        $db = new PDO('sqlite:' . self::DB_FILE);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $db;
     }
 
@@ -49,7 +49,7 @@ class TaldeaDB
     public static function selectTaldea($id)
     {
         try {
-            $db = new PDO("sqlite:C:\\Users\\PC-8\\xampp\\htdocs\\Erronka_01\\denda.db");
+            $db = new PDO('sqlite:' . self::DB_FILE);
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             $sql = "SELECT * FROM taldeak WHERE id = ?";
@@ -86,7 +86,7 @@ class TaldeaDB
     public static function insertTaldea($taldea)
     {
         try {
-            $db = new PDO("sqlite:C:\\Users\\PC-8\\xampp\\htdocs\\Erronka_01\\denda.db");
+            $db = new PDO('sqlite:' . self::DB_FILE);
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 
             $id_kategoria = (int)$taldea->getIdKategoria();
@@ -110,7 +110,7 @@ class TaldeaDB
 
     public static function updateTaldea($taldea) {
         try {
-            $db = new PDO("sqlite:C:\\Users\\PC-8\\xampp\\htdocs\\Erronka_01\\denda.db");
+            $db = new PDO('sqlite:' . self::DB_FILE);
 
             $id = (int)$taldea->getId();
             $id_kategoria = (int)$taldea->getIdKategoria();
@@ -141,7 +141,7 @@ class TaldeaDB
 
     public static function deleteTaldea($id) {
         try {
-            $db = new PDO("sqlite:C:\\Users\\PC-8\\xampp\\htdocs\\Erronka_01\\denda.db");
+            $db = new PDO('sqlite:' . self::DB_FILE);
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $db->exec('PRAGMA foreign_keys = ON;');
 

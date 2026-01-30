@@ -2,7 +2,8 @@
 header("Content-Type: application/json; charset=UTF-8");
 
 try {
-    $db = new PDO('sqlite:../../denda.db');
+    $dbPath = __DIR__ . '/../../denda.db';
+    $db = new PDO('sqlite:' . $dbPath);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $method = $_SERVER['REQUEST_METHOD'];
 
