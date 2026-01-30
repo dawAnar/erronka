@@ -12,7 +12,7 @@
 <body>
     <header class="header">
         <div class="header-section logo">
-            <img src="img/logoa.png" alt="Dendaren logotipoa">
+            <img src="https://anartz.s3.eu-north-1.amazonaws.com/logoa.png" alt="Dendaren logotipoa">
 
         </div>
 
