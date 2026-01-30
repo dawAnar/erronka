@@ -1,0 +1,99 @@
+/* ================================
+   CSS específico para la carpeta saskia
+   Mantiene el estilo general y añade ajustes locales
+   ================================ */
+
+@import url('../hasiera/estiloa.css');
+
+/* ================================
+   Layout
+   ================================ */
+main {
+    padding-top: 20px;
+}
+
+/* ================================
+   Tabla de la saskia
+   ================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th,
+table td {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #f0f0f0;
+    text-align: left;
+}
+
+/* ================================
+   Botones de la saskia
+   ================================ */
+.btn-update,
+.btn-delete,
+.btn-order {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Actualizar */
+.btn-update {
+    background: #27ae60;
+    color: #fff;
+}
+
+.btn-update:hover {
+    background: #1e8449;
+}
+
+/* Eliminar */
+.btn-delete {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background: #c0392b;
+}
+
+/* Finalizar pedido */
+.btn-order {
+    background: #0069d9;
+    color: #fff;
+    padding: 8px 14px;
+}
+
+.btn-order:hover {
+    background: #0053b3;
+}
+
+/* ================================
+   Formularios dentro de la tabla
+   ================================ */
+table form {
+    margin: 0;
+}
+
+table input[type="number"] {
+    padding: 4px 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ================================
+   Mensajes
+   ================================ */
+main p {
+    margin-top: 12px;
+}

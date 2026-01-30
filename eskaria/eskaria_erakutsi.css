@@ -1,0 +1,94 @@
+/* ================================
+   Estilos para la vista de eskariak
+   Coherente con estiloa.css del proyecto
+   ================================ */
+
+@import url('../hasiera/estiloa.css');
+
+/* ================================
+   Layout general
+   ================================ */
+main {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 16px;
+}
+
+/* ================================
+   Tablas (laburpena + listado)
+   ================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+table th,
+table td {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #f0f0f0;
+    text-align: left;
+}
+
+/* ================================
+   Formularios (bezeroa)
+   ================================ */
+.form-row {
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.form-row input {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ================================
+   Botones (coherentes con saskia)
+   ================================ */
+.btn-order {
+    background: #0069d9;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-order:hover {
+    background: #0053b3;
+}
+
+/* Volver atrás */
+.back-button {
+    background: transparent;
+    color: #0069d9;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+/* ================================
+   Estados vacíos / mensajes
+   ================================ */
+.empty {
+    color: #888;
+    margin-top: 12px;
+}

@@ -1,0 +1,190 @@
+/* ================== ESTILOS GLOBALES BÁSICOS ================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navegación y Cabecera */
+.nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* ================== DETALLE PRINCIPAL (FLEXBOX) ================== */
+
+.product-detail {
+    /* **FLEXBOX PRINCIPAL:** Coloca el ícono y la información uno al lado del otro */
+    display: flex;
+    gap: 30px;
+    align-items: flex-start; /* Alinea arriba */
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+
+/* Ícono del equipo */
+.product-image-large {
+    flex-shrink: 0; /* No se encoge */
+    width: 100px;
+    height: 100px;
+    background-color: #e5e5e5;
+    border-radius: 5px;
+    
+    /* Centrar el ícono (con Flexbox) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+/* Información del producto (ocupa el resto del espacio) */
+.product-info {
+    flex-grow: 1; 
+}
+
+.product-info h1 {
+    margin-top: 0;
+    color: #34495e;
+    font-size: 2em;
+}
+
+.product-category {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* ⚠️ SECCIÓN .product-description ELIMINADA ⚠️ */
+
+/* ================== Especificaciones (Specs) ================== */
+
+.product-specs {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.product-specs h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 5px;
+}
+
+/* Contenedor de cada item de especificación (Flex) */
+.spec-item {
+    display: flex;
+    justify-content: space-between; /* Etiqueta a la izquierda, valor a la derecha */
+    padding: 5px 0;
+}
+
+.spec-label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* ================== Sección de Precios ================== */
+
+.price-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9f7ef; /* Fondo verde claro */
+    border-left: 5px solid #2ecc71; /* Barra verde */
+}
+
+.price-current {
+    font-size: 2.5em;
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.price-original {
+    font-size: 1.2em;
+    color: #888;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+/* Información del descuento */
+.discount-info {
+    margin-top: 10px;
+}
+.savings {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* ================== Botones Inferiores ================== */
+
+.text-left {
+    padding-top: 10px;
+}
+
+.back-button, .category-button {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.back-button {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.category-button {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Estilos para el botón de añadir al carrito y el input de cantidad */
+.add-to-cart-button {
+    display: inline-block;
+    padding: 8px 14px;
+    margin-left: 8px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.add-to-cart-button:hover { background-color: #1e8449; }
+
+#kopurua {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ================== Responsive (Apilado simple) ================== */
+
+@media (max-width: 600px) {
+    .product-detail {
+        /* Fuerza a que el ícono y la información se apilen */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

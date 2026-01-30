@@ -1,0 +1,225 @@
+body {
+    font-family: 'Arial Black', Arial, sans-serif;
+    margin: 0;
+    background-color: #0b1f0a;
+    color: #f0f0f0;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: #00ff73;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #a6ff4d;
+    text-decoration: underline;
+}
+
+.header {
+    display: flex;      
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+
+    background-color: #004d1a;
+    border-bottom: 4px solid #00ff73;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.header-section.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.header-section.title {
+    flex: 1;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.2em;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px #00ff73;
+}
+
+.header-section.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: #d4ffd4;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.nav a:hover {
+    color: #00ff73;
+    transform: scale(1.05);
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+
+    background: linear-gradient(180deg, #0b1f0a 0%, #003d15 100%);
+}
+
+.taldeak-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.talde-card {
+    background-color: #013d13;
+    border: 2px solid #00ff73;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(25% - 24px);
+
+    min-width: 220px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 255, 115, 0.25);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.talde-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0, 255, 115, 0.45);
+}
+
+.talde-image {
+    font-size: 2.6em;
+    margin-bottom: 10px;
+}
+
+.talde-card h3 {
+    color: #00ff73;
+    margin: 8px 0;
+}
+
+.talde-description {
+    font-size: 0.95em;
+    color: #e6ffe6;
+    margin-bottom: 12px;
+}
+
+.talde-price {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ccffd0;
+}
+
+.price-crossed {
+    text-decoration: line-through;
+    color: #99cc99;
+    font-size: 0.9em;
+    margin-left: 6px;
+}
+
+.deskontu-prezioa {
+    color: #ffda7a;
+}
+
+.xehetasunak-botoia,
+.view-btn {
+    background-color: #00ff73;
+    color: #003d15;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.xehetasunak-botoia:hover,
+.view-btn:hover {
+    background-color: #a6ff4d;
+}
+
+.empty-state {
+    text-align: center;
+    color: #d7ffd7;
+    padding: 30px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    background-color: #001f0f;
+    padding: 30px;
+    border-top: 3px solid #00ff73;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.footer .socials {
+    font-size: 1.1em;
+}
+
+.footer .socials a {
+    margin: 0 15px;
+    color: #ccffcc;
+    font-weight: bold;
+}
+
+.footer .socials a:hover {
+    color: #00ff73;
+}
+
+.footer p {
+    font-size: 0.9em;
+    color: #99cc99;
+}
+
+@media (max-width: 992px) {
+    .talde-card { flex: 1 1 calc(33.33% - 24px); }
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .title { font-size: 2em; }
+
+    .talde-card {
+        flex: 1 1 calc(50% - 18px);
+        min-width: 160px;
+    }
+}
+
+@media (max-width: 576px) {
+    .talde-card {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+}

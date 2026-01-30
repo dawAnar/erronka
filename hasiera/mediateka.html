@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mediateka</title>
+
+	<link rel="icon" href="img/favIconHTML5.png" type="image/png">
+	<link rel="stylesheet" href="estiloa.css">
+	<link rel="stylesheet" href="mediateka.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header-section logo">
+			<img src="img/logoa.png" alt="logo">
+		</div>
+
+		<div class="header-section title">Mediateka</div>
+
+		<nav class="header-section nav">
+			<a href="../katalogoa/kategoriak_erakutsi.php">Kategoriak</a>
+			<a href="../katalogoa/taldeak_erakutsi.php">Taldeak</a>
+			<a href="#">Saskia</a>
+			<a href="../kontaktua/mezu_berria.php">Kontaktua</a>
+		</nav>
+	</header>
+
+	<main class="main-content">
+
+		<!-- GALERIA -->
+		<section id="galeria" class="featured">
+			<h2>Galeria</h2>
+
+			<div class="gallery">
+				<figure>
+					<img src="img/taldeak/Barcelona.png" alt="Barcelona">
+					<figcaption>FC Barcelona</figcaption>
+				</figure>
+
+				<figure>
+					<img src="img/taldeak/Athletic.png" alt="Athletic">
+					<figcaption>Athletic</figcaption>
+				</figure>
+
+				<figure>
+					<img src="img/taldeak/Mallorca.png" alt="Mallorca">
+					<figcaption>Mallorca</figcaption>
+				</figure>
+
+				<figure>
+					<img src="img/taldeak/Betis.png" alt="Betis">
+					<figcaption>Betis</figcaption>
+				</figure>
+
+				<figure>
+					<img src="img/taldeak/Real Sociedad.png" alt="Real Sociedad">
+					<figcaption>Real Sociedad</figcaption>
+				</figure>
+
+				<figure>
+					<img src="img/taldeak/Sevilla.png" alt="Sevilla">
+					<figcaption>Sevilla</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<!-- AUDIO -->
+		<section id="audio" class="about">
+			<h2>Audio</h2>
+
+			<div class="track-bar">
+				<button id="audioPrev" type="button">◀</button>
+
+				<select id="audioList">
+					<option>Video de Linea de Cal</option>
+					<option>Entrevista a Ander Herrera</option>
+					<option>Entrevista a Jagoba Arrasate</option>
+				</select>
+
+				<button id="audioNext" type="button">▶</button>
+			</div>
+
+			<div class="audio-header">
+				Reproduciendo: <span id="currentTrack">-</span>
+			</div>
+
+			<audio id="audioPlayer" preload="metadata" src="img/audio/LDC.mp3"></audio>
+
+			<div class="media-controls">
+				<button id="audioPlay" type="button">Play</button>
+				<button id="audioStop" type="button">Stop</button>
+				<button id="audioAtras" type="button">-10s</button>
+				<button id="audioAdelante" type="button">+10s</button>
+				<button id="audioReiniciar" type="button">Hasierara bueltatu</button>
+			</div>
+		</section>
+
+		<!-- VIDEO -->
+		<section id="video" class="about">
+			<h2>Vídeo</h2>
+
+			<div class="track-bar">
+				<button id="videoPrev" type="button">◀</button>
+
+				<select id="videoList">
+					<option>Video de La Pizarra de Quintana</option>
+					<option>Kolderiu analisis</option>
+					<option>Resumen Cultural Athletic</option>
+				</select>
+
+				<button id="videoNext" type="button">▶</button>
+			</div>
+
+			<video
+				id="videoPlayer"
+				preload="metadata"
+				poster="img/taldeak/Real Madrid.png"
+				src="img/audio/PDQ.mp4"
+				width="640">
+			</video>
+
+			<div class="media-controls">
+				<button id="videoPlay" type="button">Play</button>
+				<button id="videoStop" type="button">Stop</button>
+				<button id="videoMute" type="button">Mute</button>
+				<button id="videoVolMas" type="button">VOL +</button>
+				<button id="videoVolMenos" type="button">VOL -</button>
+				<button id="videoAtras" type="button">-10s</button>
+				<button id="videoAdelante" type="button">+10s</button>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="socials">
+			<a href="#">Instagram</a>
+			<a href="#">WhatsApp</a>
+			<a href="#">Email</a>
+		</div>
+
+		<p>© 2025 Futbol Total - Kontaktua: +34 600 000 000</p>
+	</footer>
+
+	<script src="mediateka.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+body {
+	font-family: 'Arial Black', Arial, sans-serif;
+	margin: 0;
+	background-color: #06160b;
+	color: #f0f8f0;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	background-color: #004d1a;
+	padding: 20px 30px;
+	border-bottom: 4px solid #00ff73;
+}
+
+.featured {
+	max-width: 1000px;
+	margin: 0 auto 30px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.featured h2 {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.gallery {
+	display: flex;
+	gap: 20px;
+	width: 100%;
+	margin: 0 auto;
+
+	overflow-x: auto;
+	overflow-y: hidden;
+	flex-wrap: nowrap;
+	-webkit-overflow-scrolling: touch;
+	padding: 10px 6px 12px 6px;
+}
+
+.gallery figure {
+	flex: 0 0 180px;
+	padding: 10px;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.gallery figure img {
+	width: 100%;
+	height: 120px;
+	object-fit: contain;
+	display: block;
+	margin: 0 auto;
+}
+
+.about {
+	max-width: 900px;
+	margin: 24px auto;
+	padding: 18px;
+	border-radius: 8px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+#audioPlayer, #videoPlayer {
+	width: 100%;
+	max-width: 640px;
+	display: block;
+	margin: 0 auto;
+}
+
+.media-controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 10px;
+	flex-wrap: wrap;
+}
+
+.media-controls button {
+	background: #00ff73;
+	border: none;
+	color: #003d15;
+	font-weight: bold;
+	padding: 8px 12px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.track-bar {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	justify-content: center;
+	margin: 8px 0 12px 0;
+}
+
+.track-bar select {
+	padding: 8px 10px;
+	border-radius: 6px;
+	border: 1px solid #005724;
+	background: #f8fff8;
+	color: #002a10;
+	min-width: 220px;
+}
+
+.track-bar button {
+	background: #00ff73;
+	border: none;
+	color: #003d15;
+	padding: 8px 10px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.track-bar button#audioPrev, .track-bar button#videoPrev,
+.track-bar button#audioNext, .track-bar button#videoNext {
+	width: 40px;
+	height: 36px;
+	padding: 0;
+	font-weight: bold;
+}
+
+.footer {
+	text-align: center;
+	padding: 20px;
+	margin-top: 30px;
+	background: #001f0f;
+	border-top: 3px solid #00ff73;
+}
+
+@media (max-width:768px){
+	.gallery figure {
+		flex: 0 0 140px;
+	}
+	.header {
+		padding: 16px 14px;
+	}
+	.track-bar select {
+		min-width: 180px;
+	}
+}
